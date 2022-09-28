@@ -1,0 +1,95 @@
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.box {
+    background-color: #55688A;
+    margin: 0 auto;
+    max-width: 500px;
+    color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    display: block;
+    margin: 15px auto;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+
+.day-time-today{
+    text-transform: uppercase;
+}
+
+.form-control{
+    width: 140%;
+}
+
+.search-button{
+    position: relative;
+    left: 30px;
+}
+
+.current-button{
+    position: relative;
+    left: 35px;
+}
+
+.box-today{
+    padding: 0;
+}
+
+.temp-today{
+    
+    font-size: 70px;
+    line-height: 27px;
+    margin-top: 22px;
+}
+
+.temperature{
+    margin-right: 0;
+    top: -29px;
+}
+
+.units{
+    font-size: 15px;
+    color: #fff;
+    position: relative;
+    top: -36px;
+    left: -20px;
+}
+
+#search-form{
+    margin-top: 0;
+}
+
+#celsius-link{
+    color: #fff;
+    text-decoration: none;
+}
+#celsius-link:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+
+
+#fahrenheit-link{
+    color: #fff;
+    text-decoration: none;
+}
+#fahrenheit-link:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+
+.day-week{
+    
+    border-radius: 10px;
+    margin: 3px;
+    background: #7B89A4;
+    padding: 5px 15px;
+    font-size: 18px;
+    margin-top: 15px;
+}
