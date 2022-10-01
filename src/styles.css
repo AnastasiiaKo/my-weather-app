@@ -10,7 +10,7 @@ body{
     border-radius: 20px;
     padding: 15px;
     display: block;
-    margin: 15px auto;
+    margin: 15px auto 0 auto;
 }
 
 h1{
@@ -92,4 +92,17 @@ h1{
     padding: 5px 15px;
     font-size: 18px;
     margin-top: 15px;
+}
+
+.signature{
+    text-align: center;
+    font-size: small;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.link:hover{
+    text-decoration: underline;
 }
