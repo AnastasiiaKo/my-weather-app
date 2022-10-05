@@ -22,18 +22,31 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+
 function displayWeatherCondition (response){
   document.querySelector("#sity").innerHTML = response.data.name;
-  console.log(response.data);
   document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#feels-like").innerHTML = Math.round(response.data.main.feels_like);
   document.querySelector("#max-temp").innerHTML = Math.round(response.data.main.temp_max);
   document.querySelector("#min-temp").innerHTML = Math.round(response.data.main.temp_min);
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
-  document.querySelector("#cloudy").innerHTML = response.data.weather[0].main;
+  document.querySelector("#cloudy").innerHTML =
+    response.data.weather[0].description;
 
+  let datetoday = document.querySelector("#day-time-today");
+  datetoday.innerHTML = formatDate(response.data.dt * 1000);
+  console.log(response.data);
+
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
+
+
 
 function searchSity (sity) {
    let apiKey = "c73627997b1d23b47d143634c55fed12";
@@ -67,11 +80,15 @@ let formSearchSity = document.querySelector("#search-form");
 formSearchSity.addEventListener("submit", handleSubmit);
 
 let now = new Date();
-let today = document.querySelector("div .day-time-today");
-today.innerHTML = formatDate(today);
+// let today = document.querySelector("#day-time-today");
+// today.innerHTML = formatDate(today);
 
 let currentLocationButton = document.querySelector("#button-location");
 currentLocationButton.addEventListener("click", getCurrentLocations);
+
+
+
+
 
 /*function convertToCelsius(event) {
   event.preventDefault();

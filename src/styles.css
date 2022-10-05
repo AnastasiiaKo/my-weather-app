@@ -19,7 +19,7 @@ h1{
 }
 
 
-.day-time-today{
+#day-time-today{
     text-transform: uppercase;
 }
 
@@ -82,6 +82,9 @@ h1{
     color: yellow;
 }
 
+#cloudy{
+    text-transform: capitalize;
+}
 
 #fahrenheit-link{
     color: #fff;
@@ -103,7 +106,8 @@ h1{
 }
 
 .signature{
-    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
     font-size: small;
 }
 
