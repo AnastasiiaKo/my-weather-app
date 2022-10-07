@@ -109,9 +109,13 @@ h1{
     max-width: 105%;
 }
 
-
-
 #cloudy{
     text-transform: capitalize;
 }
 
+#fahrenheit-link{
+    text-decoration: none;
+}
+#fahrenheit-link:hover{
+    text-decoration: underline;
+}
