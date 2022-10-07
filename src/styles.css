@@ -47,6 +47,7 @@ h1{
 .box-today{
     padding: 0 0 0 80px;
 }
+  
 
 .temp-today{
     
@@ -68,31 +69,15 @@ h1{
     left: -20px;
 }
 
-#search-form{
-    margin-top: 0;
-    max-width: 105%;
-}
-
-#celsius-link{
+.box-today .active{
     color: #fff;
     text-decoration: none;
-}
-#celsius-link:hover{
-    text-decoration: underline;
-    color: yellow;
+    cursor: default;
 }
 
-#cloudy{
-    text-transform: capitalize;
-}
-
-#fahrenheit-link{
-    color: #fff;
+.box-today .active:hover{
     text-decoration: none;
-}
-#fahrenheit-link:hover{
-    text-decoration: underline;
-    color: yellow;
+    color: #fff;
 }
 
 .day-week{
@@ -118,3 +103,15 @@ h1{
 .link:hover{
     text-decoration: underline;
 }
+
+#search-form{
+    margin-top: 0;
+    max-width: 105%;
+}
+
+
+
+#cloudy{
+    text-transform: capitalize;
+}
+

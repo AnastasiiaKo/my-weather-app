@@ -18,7 +18,7 @@
     <div class="box">
         <div class="container">
             <div class="row">
-                <form class="row" id="search-form">
+                <form class="row mb-3" id="search-form">
                     <div class="col-5">
                         <h1 id="sity" >London</h1>
                         <div id="day-time-today">
@@ -26,10 +26,16 @@
                         </div>
                     </div>
                     <div class="col-3 search-window">
-                        <input type="search" class="form-control" id="search-text-input"  placeholder="Tipe a city...">
+                        <input 
+                        type="search" 
+                        class="form-control" 
+                        id="search-text-input"  
+                        placeholder="Tipe a city..."
+                        autocomplete="off"
+                        >
                     </div>
                     <div class="col search-button">
-                        <button type="submit" class="btn btn-primary mb-3 id="search-button">Search</button>
+                        <button type="submit" class="btn btn-primary mb-3 id="search-button" >Search</button>
                     </div>
                     <div class="col current-button">
                         <button type="button" class="btn btn-success" id="button-location">Current</button>
@@ -48,7 +54,7 @@
                     <div class="temp-today">
                         <span class="temperature" id="temperature">24</span> 
                         <span class="units">
-                            <a href="#" id="celsius-link">°C</a> |
+                            <a href="#" id="celsius-link" class="active">°C</a> |
                             <a href="#" id="fahrenheit-link">°F</a>
                         </span>
                     </div> 
