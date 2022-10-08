@@ -88,6 +88,7 @@ h1{
     padding: 5px 15px;
     font-size: 18px;
     margin-top: 15px;
+    text-align: center;
 }
 
 .signature{
@@ -96,12 +97,17 @@ h1{
     font-size: small;
 }
 
+
 .link{
     text-decoration: none;
 }
 
 .link:hover{
     text-decoration: underline;
+}
+
+.weather-forecast-temperarure-min{
+    opacity: 0.6;
 }
 
 #search-form{
