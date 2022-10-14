@@ -22,6 +22,34 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function getForecast(coordinates){
+  let apiKey = "c73627997b1d23b47d143634c55fed12";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+
+function displayForecast(response){
+  console.log(response.data.daily);
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function(day) {
+  forecastHTML = forecastHTML+ 
+  `
+      <div class="col day-week">
+      ${day} <br>
+      <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="">
+      <div class="weather-forecast-temperarure">
+        <span class="weather-forecast-temperarure-max">20&deg  </span>
+          <span class="weather-forecast-temperarure-min">7&deg;</span>
+      </div>
+    </div>
+  `;
+  });
+  forecastHTML = forecastHTML+ `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayWeatherCondition (response){
   document.querySelector("#sity").innerHTML = response.data.name;
@@ -39,9 +67,9 @@ function displayWeatherCondition (response){
   );
 
   celsiusTemperature = response.data.main.temp;
+  getForecast(response.data.coord);
+ 
 }
-
-
 
 function searchSity (sity) {
    let apiKey = "c73627997b1d23b47d143634c55fed12";
