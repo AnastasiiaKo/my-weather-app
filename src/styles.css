@@ -1,6 +1,7 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
-    max-width: 100%;
+    margin-top: 90px;
+    background: rgb(221, 221, 221);
 }
 
 .box {
